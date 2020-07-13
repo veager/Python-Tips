@@ -46,9 +46,21 @@
 
 
 
+## 1. 安装包
 
+### 1.1. conda安装包
 
+`conda install librosa`
 
+当出现以下错误提示时：
 
+ackagesNotFoundError: The following packages are not available from current channels:
 
+1. 执行`anaconda search -t conda X`，显示可用的版本 
+
+2. 选择适合自己的版本，执行：`conda install -c https://conda.anaconda.org/X` `X`为所选择的安装的包
+
+   如：`conda install -c https://conda.anaconda.org/conda-forge librosa`
+   
+   
 
