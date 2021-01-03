@@ -7,7 +7,7 @@
 直接在CMD中运行
 
 ```python
-pyinstaller -F `*.py`
+pyinstaller -F `*.py` -i="*.ico" --upx-dir="*\upx.exe" --distpath="*folder"
 ```
 
 
@@ -20,17 +20,12 @@ pyinstaller -F `*.py`
 
 ### 1.2. 相关参数
 
-常用参数
-
-| -F, –onefile                | 打包一个单个文件，如果你的代码都写在一个.py文件的话，可以用这个，如果是多个.py文件就别用 |
-| :-------------------------- | :----------------------------------------------------------- |
-| -D, –onedir                 | 打包多个文件，在dist中生成很多依赖文件，适合以框架形式编写工具代码，我个人比较推荐这样，代码易于维护 |
-| -d, –debug                  | 产生debug版本的可执行文件                                    |
-| **-w,–windowed,–noconsole** | 使用Windows子系统执行.当程序启动的时候不会打开命令行(只对Windows有效) |
-| **-c,–nowindowed,–console** | 使用控制台子系统执行(默认)(只对Windows有效)pyinstaller -c xxxx.pypyinstaller xxxx.py –console |
-| -X, –upx                    | 如果有UPX安装(执行Configure.py时检测),会压缩执行文件(Windows系统中的DLL也会)(参见note) |
-| -o DIR, –out=DIR            | 指定spec文件的生成目录,如果没有指定,而且当前目录是PyInstaller的根目录,会自动创建一个用于输出(spec和生成的可执行文件)的目录.如果没有指定,而当前目录不是PyInstaller的根目录,则会输出到当前的目录下. |
-| –icon=<FILE.ICO>            | 将file.ico添加为可执行文件的资源(只对Windows系统有效)，改变程序的图标 pyinstaller -i ico路径 xxxxx.py |
+>- `-F` 可替换为
+>- `*.py` 带打包`py`文件路径，可替换为`*.spec`文件路径
+>
+>- `-i=` 指定图标路径
+>- `--upx-dir=` 指定`upx.exe` 路径。实测UPX压缩效果不明显（从到62.6MB）
+>- `--distpath=` 指定存放打包生成的`exe`文件的文件夹。
 
 例子：
 
