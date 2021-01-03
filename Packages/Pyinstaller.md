@@ -6,7 +6,7 @@
 
 直接在CMD中运行
 
-```python
+```cmd
 pyinstaller -F `*.py` -i="*.ico" --upx-dir="*\upx.exe" --distpath="*folder"
 ```
 
