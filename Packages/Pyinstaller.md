@@ -24,7 +24,7 @@ pyinstaller -F `*.py` -i="*.ico" --upx-dir="*\upx.exe" --distpath="*folder"
 >- `*.py` 带打包`py`文件路径，可替换为`*.spec`文件路径
 >
 >- `-i=` 指定图标路径
->- `--upx-dir=` 指定`upx.exe` 路径。实测UPX压缩效果不明显（从到62.6MB）
+>- `--upx-dir=` 指定`upx.exe` 路径。实测UPX压缩无效果
 >- `--distpath=` 指定存放打包生成的`exe`文件的文件夹。
 
 例子：
